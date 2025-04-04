@@ -658,7 +658,7 @@ class Member(xport.Dataset):
             except KeyError:
                 continue
         if conversions:
-            LOG.warning(f'Converting column dtypes {conversions}')
+            # warnings.warn(f'Converting column dtypes {conversions}')
             # BUG: ``DataFrame.copy`` mutates and discards ``Variable`` metadata.
             # self = self.copy()  # Don't mutate!
             cpy = xport.Dataset({k: v for k, v in self.items()})
