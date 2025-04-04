@@ -663,7 +663,7 @@ class Member(xport.Dataset):
             # self = self.copy()  # Don't mutate!
             cpy = xport.Dataset({k: v for k, v in self.items()})
             for column, dtype in conversions.items():
-                LOG.warning(f'Converting column {column!r} from {dtypes[column]} to {dtype}')
+                # LOG.warning(f'Converting column {column!r} from {dtypes[column]} to {dtype}')
                 try:
                     cpy[column] = cpy[column].astype(dtype)
                 except Exception:
