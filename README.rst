@@ -4,11 +4,11 @@
 
 .. sphinx-page-start
 
-This is a fork from https://github.com/selik/xport
+This is a fork from https://github.com/selik/xport to enable support for pandas 2.2.3
 
-Comment by Alan Bellingham: to install this version of the software:
+Comment by RattyBiscuit: to install this version of the software:
 
-pip install git+https://github.com/alan-bellingham/xport.git
+pip install git+https://github.com/rattybiscuit/xport.git
 
 Rest of the documentation is from the original repro
 
