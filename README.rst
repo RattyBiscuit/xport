@@ -9,7 +9,9 @@ Pandas 2.2.3 or above.
 
 Comment by RattyBiscuit: to install this version of the software:
 
-pip install git+https://github.com/rattybiscuit/xport.git
+    pip install git+https://github.com/rattybiscuit/xport.git
+
+Comment by RattyBiscuit: Updated the Contributing section.
 
 Rest of the documentation is from the original repro
 
@@ -221,8 +223,9 @@ This project is configured to be developed in a Conda environment.
 
     $ git clone git@github.com:selik/xport.git
     $ cd xport
-    $ make install          # Install into a Conda environment
-    $ conda activate xport  # Activate the Conda environment
+    $ python -m venv ~/.virtualenvs/xport
+    $ source ~/.virtualenvs/xport/bin/activate
+    $ pip install -r requirements.txt
     $ make install-html     # Build the docs website
 
 
