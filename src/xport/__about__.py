@@ -14,25 +14,29 @@ Project metadata, such as the current version number.
 import pathlib
 from collections import namedtuple
 
+import warnings
+
 # Community Packages
-from pkg_resources import DistributionNotFound, get_distribution
+with warnings.catch_warnings():
+    warnings.filterwarnings("ignore")
+    from pkg_resources import DistributionNotFound, get_distribution
 
 __all__ = [
-    '__version__',
+    "__version__",
 ]
 
 
-class Version(namedtuple('Version', 'major minor patch')):
+class Version(namedtuple("Version", "major minor patch")):
     """
     Version information.
     """
 
     @classmethod
     def parse(cls, s):
-        return Version(*map(int, s.split('.')))
+        return Version(*map(int, s.split(".")))
 
     def __str__(self):
-        return '.'.join(map(str, self))
+        return ".".join(map(str, self))
 
 
 project = pathlib.Path(__file__).parent.name
